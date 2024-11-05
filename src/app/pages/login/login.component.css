@@ -1,0 +1,30 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  width: 30rem;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.alternative-loginbtn-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.alternative-loginbtn {
+  padding: 0.75rem 1.5rem;
+}
