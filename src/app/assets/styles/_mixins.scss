@@ -1,0 +1,10 @@
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin scale-hover {
+    opacity: 0.2;
+    transform: scale(1.05);
+}

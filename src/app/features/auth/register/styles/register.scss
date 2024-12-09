@@ -1,0 +1,146 @@
+@import "../../../../../app/assets/styles/mixins";
+@import "../../../../../app/assets/styles/variables";
+
+.main-container 
+{
+    padding: 4rem;
+    border-radius: 2rem;
+    background: linear-gradient(135deg, #ff914d, #ffcc29, #86a8e7);
+
+    nav
+    {
+        @include flex-center;
+        justify-content: start;
+        gap: 1rem;
+        margin: 0 5rem;
+        img 
+        {
+            width: 10rem;
+        }
+
+        h1
+        {
+            font-family: 'Cookie', sans-serif;
+            font-size: 100px;
+            color: $primary-color;
+        }
+    }
+}
+
+.login-container
+{
+    @include flex-center;
+
+    gap: 9rem;
+
+    img {
+        width: 35rem;
+    }
+}
+
+.login-form
+{
+    h1 {
+        font-size: 50px;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    
+    button
+    {
+        width: 100%;
+        padding: .6rem 0;
+        border-radius: .5rem;
+        border: 0;
+        cursor: pointer;
+        transition: 1s;
+        background-color: $primary-color;
+        color: #fff;
+        font-size: 16px;
+        font-weight: $font-bolder;
+    }
+
+    button:hover {
+        @include scale-hover;
+    }
+    
+}
+
+.form-input-wrapper 
+{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    input {
+        border: .5px solid $primary-color;
+        border-radius: .5rem;
+        padding: .75rem 1.25rem;
+        font-size: 16px;
+    }
+}
+
+.forgot-password
+{
+    color: $primary-color;
+    cursor: pointer;
+    transition: 1s;
+    margin: 1rem 0;
+}
+
+.forgot-password:hover
+{
+    @include scale-hover;
+}
+
+.alternative-login
+{
+    @include flex-center;
+    gap: 1rem;
+    margin: 2rem 0;
+
+    div
+    {
+        background-color: rgba(0, 0, 0, 0.3);
+        width: 8rem;
+        height: 2px;
+    }
+
+    p {
+        font-weight: $font-bolder;
+    }
+}
+
+.social-icons-container
+{
+    @include flex-center;
+    justify-content: space-around;
+
+    img {
+        width: 3rem;
+        cursor: pointer;
+        transition: 1s;
+    }
+
+    img:hover{
+        @include scale-hover;
+    }
+    
+}
+
+.register-paragraph {
+    text-align: center;
+    margin: 2rem;
+
+    span 
+    {
+        color: $primary-color;
+        cursor: pointer;
+        transition: 1s;
+    }
+
+    span:hover
+    {
+        @include scale-hover;
+    }
+}

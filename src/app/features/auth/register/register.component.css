@@ -1,0 +1,125 @@
+.main-container {
+  padding: 4rem;
+  border-radius: 2rem;
+  background: linear-gradient(135deg, #ff914d, #ffcc29, #86a8e7);
+}
+.main-container nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
+  margin: 0 5rem;
+}
+.main-container nav img {
+  width: 10rem;
+}
+.main-container nav h1 {
+  font-family: "Cookie", sans-serif;
+  font-size: 100px;
+  color: #0056b3;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9rem;
+}
+.login-container img {
+  width: 35rem;
+}
+
+.login-form h1 {
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.login-form button {
+  width: 100%;
+  padding: 0.6rem 0;
+  border-radius: 0.5rem;
+  border: 0;
+  cursor: pointer;
+  transition: 1s;
+  background-color: #0056b3;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 900;
+}
+.login-form button:hover {
+  opacity: 0.2;
+  transform: scale(1.05);
+}
+
+.form-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.form-input-wrapper input {
+  border: 0.5px solid #0056b3;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  font-size: 16px;
+}
+
+.forgot-password {
+  color: #0056b3;
+  cursor: pointer;
+  transition: 1s;
+  margin: 1rem 0;
+}
+
+.forgot-password:hover {
+  opacity: 0.2;
+  transform: scale(1.05);
+}
+
+.alternative-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+.alternative-login div {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 8rem;
+  height: 2px;
+}
+.alternative-login p {
+  font-weight: 900;
+}
+
+.social-icons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+}
+.social-icons-container img {
+  width: 3rem;
+  cursor: pointer;
+  transition: 1s;
+}
+.social-icons-container img:hover {
+  opacity: 0.2;
+  transform: scale(1.05);
+}
+
+.register-paragraph {
+  text-align: center;
+  margin: 2rem;
+}
+.register-paragraph span {
+  color: #0056b3;
+  cursor: pointer;
+  transition: 1s;
+}
+.register-paragraph span:hover {
+  opacity: 0.2;
+  transform: scale(1.05);
+}
+
+/*# sourceMappingURL=register.component.css.map */
