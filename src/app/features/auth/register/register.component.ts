@@ -4,12 +4,13 @@ import { AnimationItem } from 'lottie-web';
 import { FormsModule } from '@angular/forms'
 import { LottieComponent, AnimationOptions } from 'ngx-lottie';
 import { UserService } from '../../../services/user.service';
-
+import { response } from 'express';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [LottieComponent, CommonModule, FormsModule],
+  imports: [LottieComponent, CommonModule,  FormsModule],
   templateUrl: './register.component.html',
   styleUrl: './register.component.css',
 })
@@ -26,14 +27,18 @@ export class RegisterComponent {
   email!: string;
   password!: string;
 
-  constructor(private userService: UserService){}
+  constructor(private userService: UserService, private router: Router){}
 
   onSubmit() {
     const userData = {
       email: this.email,
       password: this.password
     }
-
-    this.userService.postUser(userData).subscribe()
+    this.router.navigate(['/home'])
+    this.userService.postUser(userData).subscribe({
+      complete: () => { this.router.navigate(['home'])},
+      error: (error) => { console.log(error)}
+    }
+    )
   }
 }
