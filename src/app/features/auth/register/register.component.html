@@ -5,15 +5,14 @@
     </nav>
     <div class="login-container">
         <ng-lottie [options]="options" (animationCreated)="animationCreated($event)" />
-        <form class="login-form">
+        <form (ngSubmit) = "onSubmit()" class="login-form">
             <h1>Registre-se</h1>
             <div class="form-input-wrapper">
-                <input type="text" placeholder="Email">
-                <input type="password" name="" id="" placeholder="Senha">
-                <input type="password" name="" id="" placeholder="Confirme sua Senha">
+                <input type="email" name="email" [(ngModel)]="email"  placeholder="Email">
+                <input type="password" name="password" [(ngModel)]="password" placeholder="Senha">
             </div>
             <!-- <p class="forgot-password">Esqueceu a Senha?</p> -->
-            <button>Registrar-se</button>
+            <button type="submit">Registrar-se</button>
             <div class="alternative-login">
                 <div class="alternative-line"></div>
                 <p>Entre com</p>

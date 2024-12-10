@@ -20,7 +20,8 @@ export const postUser = async(req, res) => {
 
         const db = await database()
         await db.collection('users').insertOne(user)
-        res.status(200).redirect('/home')
+
+        res.status(200)
     } catch (error) {
         res.status(500).json({ message: "Error During Insertion: ", error})
     }

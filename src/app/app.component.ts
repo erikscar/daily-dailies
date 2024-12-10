@@ -8,7 +8,8 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [RouterOutlet, RegisterComponent, CommonModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css' 
+  styleUrl: './app.component.css',
+  providers: []
 })
 export class AppComponent {
   title = 'dailyDailies';
