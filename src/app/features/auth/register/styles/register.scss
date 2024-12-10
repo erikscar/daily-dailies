@@ -1,5 +1,5 @@
-@import "../../../../../app/assets/styles/mixins";
-@import "../../../../../app/assets/styles/variables";
+@use "../../../../../app/assets/styles/mixins" as *;
+@use "../../../../../app/assets/styles/variables" as *;
 
 .main-container 
 {
@@ -71,7 +71,7 @@
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-
+    margin-bottom: 1rem;
     input {
         border: .5px solid $primary-color;
         border-radius: .5rem;

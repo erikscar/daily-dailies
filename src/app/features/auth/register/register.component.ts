@@ -1,4 +1,6 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { AnimationItem } from 'lottie-web';
 import { LottieComponent, AnimationOptions } from 'ngx-lottie';
 
@@ -6,7 +8,7 @@ import { LottieComponent, AnimationOptions } from 'ngx-lottie';
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [LottieComponent],
+  imports: [LottieComponent, CommonModule, RouterLink],
   templateUrl: './register.component.html',
   styleUrl: './register.component.css',
 })
