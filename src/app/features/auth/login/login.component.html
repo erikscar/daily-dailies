@@ -1,1 +1,33 @@
-<p>login works!</p>
+<div class="main-container">
+    <nav>
+        <img src="/assets/images/dailyDailiesLogo.png" alt="logo-img">
+        <h1>DailyDailies</h1>
+    </nav>
+    <div class="login-container">
+        <ng-lottie [options]="options" (animationCreated)="animationCreated($event)" />
+
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
+            <h1>Login</h1>
+            <div class="form-input-wrapper">
+                <input type="email" placeholder="Email" formControlName="email">
+                <input type="password" placeholder="Senha" formControlName="password">
+            </div>
+            <p class="forgot-password">Esqueceu a Senha?</p>
+            <button type="submit">Login</button>
+            <div class="alternative-login">
+                <div class="alternative-line"></div>
+                <p>Entre com</p>
+                <div class="alternative-line"></div>
+            </div>
+            <div class="social-icons-container">
+                <img src="/assets/images/facebook.png" alt="facebook">
+                <img src="/assets/images/google.png" alt="google">
+                <img src="/assets/images/x.png" alt="x">
+            </div>
+            <div class="register-paragraph">
+                <p>Não Possui uma Conta?</p>
+                 <a routerLink="/register" class="create-account">Crie uma!</a>
+                </div>
+        </form>
+    </div>  
+</div>

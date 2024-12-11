@@ -5,13 +5,14 @@
     </nav>
     <div class="login-container">
         <ng-lottie [options]="options" (animationCreated)="animationCreated($event)" />
-        <form (ngSubmit) = "onSubmit()" class="login-form">
+
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="login-form">
             <h1>Registre-se</h1>
             <div class="form-input-wrapper">
-                <input type="email" name="email" [(ngModel)]="email"  placeholder="Email">
-                <input type="password" name="password" [(ngModel)]="password" placeholder="Senha">
+                <input type="email" placeholder="Email" formControlName="email">
+                <input type="password" placeholder="Senha" formControlName="password">
+                <input type="password" placeholder="Confirme sua Senha" formControlName="confirmPassword">
             </div>
-            <!-- <p class="forgot-password">Esqueceu a Senha?</p> -->
             <button type="submit">Registrar-se</button>
             <div class="alternative-login">
                 <div class="alternative-line"></div>
@@ -23,7 +24,6 @@
                 <img src="/assets/images/google.png" alt="google">
                 <img src="/assets/images/x.png" alt="x">
             </div>
-            <p class="register-paragraph">Não Possui uma Conta? <span class="create-account">Crie uma!</span></p>
         </form>
     </div>
 </div>

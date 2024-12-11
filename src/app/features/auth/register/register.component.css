@@ -112,13 +112,16 @@
 .register-paragraph {
   text-align: center;
   margin: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
 }
-.register-paragraph span {
+.register-paragraph a {
   color: #0056b3;
-  cursor: pointer;
-  transition: 1s;
+  transition: 0.5s;
 }
-.register-paragraph span:hover {
+.register-paragraph a:hover {
   opacity: 0.2;
   transform: scale(1.05);
 }

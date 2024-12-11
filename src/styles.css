@@ -11,4 +11,9 @@ body {
     padding: 2rem;
     background-color: #dbdbdb;
   }
+
+a {
+    text-decoration: none;
+    color: #000;
+}
   

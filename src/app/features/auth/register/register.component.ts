@@ -1,20 +1,28 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { AnimationItem } from 'lottie-web';
-import { FormsModule } from '@angular/forms'
+import { FormGroup, FormControl, ReactiveFormsModule, Validators } from '@angular/forms'
 import { LottieComponent, AnimationOptions } from 'ngx-lottie';
 import { UserService } from '../../../services/user.service';
-import { response } from 'express';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
+import { passwordValidator } from '../../../validators/passwordValidator';
 
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [LottieComponent, CommonModule,  FormsModule],
+  imports: [LottieComponent, CommonModule, ReactiveFormsModule, RouterLink],
   templateUrl: './register.component.html',
   styleUrl: './register.component.css',
 })
 export class RegisterComponent {
+  registerForm = new FormGroup({
+    email: new FormControl('', [Validators.required, Validators.email]),
+    password: new FormControl('', Validators.required),
+    confirmPassword: new FormControl('', Validators.required)
+  },
+  {validators: passwordValidator()}
+  
+)
 
   options: AnimationOptions = {
     path: "assets/images/logo.json",
@@ -24,21 +32,22 @@ export class RegisterComponent {
     console.log(animationItem);
   } 
 
-  email!: string;
-  password!: string;
-
   constructor(private userService: UserService, private router: Router){}
 
   onSubmit() {
-    const userData = {
-      email: this.email,
-      password: this.password
-    }
-    this.router.navigate(['/home'])
-    this.userService.postUser(userData).subscribe({
-      complete: () => { this.router.navigate(['home'])},
-      error: (error) => { console.log(error)}
-    }
-    )
+      if(this.registerForm.valid)
+      {
+        const userData = {
+          email: this.registerForm.get('email')!.value || '',
+          password: this.registerForm.get('password')!.value || ''
+        }
+        this.userService.postUser(userData).subscribe({
+          next: () => this.router.navigate(['home']),
+          error: (err) => console.log(err)
+        })
+      }   
+      else {
+        alert('Fill All Fields Correctly!')
+      }
   }
 }
