@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { LottieComponent, AnimationOptions } from 'ngx-lottie';
 import { AnimationItem } from 'lottie-web';
 import { FormControl, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
+import { UserService } from '../../../services/user.service';
 
 @Component({
   selector: 'app-login',
@@ -24,9 +25,20 @@ export class LoginComponent {
     email: new FormControl('', Validators.required),
     password: new FormControl('', Validators.required)
   })
+  constructor(private userService: UserService, private router: Router){}
 
   onSubmit() {
+    if(this.loginForm.valid){
+      const userData = {
+        email: this.loginForm.get('email')!.value || '',
+        password: this.loginForm.get('password')!.value || '' 
+      }
 
+      this.userService.searchUser(userData).subscribe({
+        next: () => { this.router.navigate(['/home'])},
+        error: (err) => { alert("Usuário Não Cadastrado")}
+      })
+    }
   }
 
 }

@@ -8,11 +8,16 @@ import { Observable, tap } from 'rxjs';
 })
 export class UserService {
 
-  private apiUrl = "http://localhost:3000/"
+  private usersUrl = "http://localhost:3000/users"
+  private searchUrl = "http://localhost:3000/users/search"
 
   constructor(private http: HttpClient) { }
 
   postUser(userData: {email: string, password: string}): Observable<any> {
-    return this.http.post(this.apiUrl, userData)
+    return this.http.post(this.usersUrl, userData)
+  }
+
+  searchUser(userData: { email: string; password: string }): Observable<any> {
+    return this.http.post<any>(this.searchUrl, userData);
   }
 }

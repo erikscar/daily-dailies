@@ -65,14 +65,18 @@
   font-size: 16px;
 }
 
-.forgot-password {
-  color: #0056b3;
-  cursor: pointer;
-  transition: 1s;
-  margin: 1rem 0;
+.have-account {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
 }
-
-.forgot-password:hover {
+.have-account a {
+  color: #0056b3;
+  transition: 0.5s;
+}
+.have-account a:hover {
   opacity: 0.2;
   transform: scale(1.05);
 }

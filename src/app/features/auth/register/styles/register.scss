@@ -80,17 +80,18 @@
     }
 }
 
-.forgot-password
-{
-    color: $primary-color;
-    cursor: pointer;
-    transition: 1s;
-    margin: 1rem 0;
-}
+.have-account {
+    @include flex-center;
+    gap: .5rem;
+    margin-top: 1.5rem;
 
-.forgot-password:hover
-{
-    @include scale-hover;
+    a {
+        color: $primary-color;
+        transition: .5s;
+    }
+    a:hover {
+        @include scale-hover;
+    }
 }
 
 .alternative-login
