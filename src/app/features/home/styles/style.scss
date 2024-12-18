@@ -1,0 +1,32 @@
+@use "../../../../app/assets/styles/mixins" as *;
+@use "../../../../app/assets/styles/variables" as *;
+
+
+.home-container {
+    display: flex;
+    height: 90vh;
+    background-color: #dbdbdb;
+    box-shadow: $box-shadow;
+    border-radius: $cardborder-radius;
+
+    aside {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        background-color: #fff;
+        border-radius: $cardborder-radius;
+        box-shadow: $box-shadow;
+        gap: 1rem;
+
+            img {
+                width: 5rem;
+            }
+
+            i {
+                font-size: 25px;
+                color: #000;
+            }
+       
+    }
+}
