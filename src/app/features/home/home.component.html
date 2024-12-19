@@ -2,16 +2,64 @@
     <aside>
         <img src="assets/images/dailyDailiesLogo.png" alt="logo-img">
         <div class="aside-icons">
-            <a routerLink="/home"><i class="fa-solid fa-chart-pie"></i></a>
-            <a routerLink="/dailies"><i class="fa-regular fa-clipboard"></i></a>
-            <a routerLink="/calendar"><i class="fa-regular fa-calendar"></i></a>
-            <a routerLink="/notifications"><i class="fa-regular fa-bell"></i></a>
-            <a routerLink="/faq"><i class="fa-regular fa-circle-question"></i></a>
-            <a routerLink="/profile"><i class="fa-regular fa-circle-user"></i></a>
+            <a routerLink="/home" routerLinkActive="active">
+                <i class="fa-solid fa-chart-pie"></i>
+            </a>
+            <a routerLink="/dailies" routerLinkActive="active">
+                <i class="fa-regular fa-clipboard"></i>
+            </a>
+            <a routerLink="/calendar" routerLinkActive="active">
+                <i class="fa-regular fa-calendar"></i>
+            </a>
+            <a routerLink="/notifications" routerLinkActive="active">
+                <i class="fa-regular fa-bell"></i>
+            </a>
+            <a routerLink="/faq" routerLinkActive="active">
+                <i class="fa-regular fa-circle-question"></i>
+            </a>
+            <a routerLink="/profile" routerLinkActive="active">
+                <i class="fa-regular fa-circle-user"></i>
+            </a>
         </div>
         <div class="aside-icons">
-            <a routerLink="/settings"><i class="fa-solid fa-gear"></i></a>
-            <a routerLink="/login"><i class="fa-solid fa-right-to-bracket"></i></a>
+            <a routerLink="/settings" routerLinkActive="active">
+                <i class="fa-solid fa-gear"></i>
+            </a>
+            <a routerLink="/">
+                <i class="fa-solid fa-right-to-bracket"></i>
+            </a>
         </div>
     </aside>
+    <div class="main-content">
+        <div class="header">
+            <div class="input-wrapper">
+                <button type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <input type="text" placeholder="Pesquisar">
+            </div>
+            <div class="header-icons">
+                <i class="fa-regular fa-bell"></i>
+                <img src="assets/images/erik.png" alt="">
+            </div>
+        </div>
+        <div class="calendar-container">
+            <div>
+                <p>Fevereiro 2020</p>
+                <div>
+                    <button><</button>
+                    <button>></button>
+                </div>
+            </div>
+            <div class="days-week">
+                <div class="day">Dom</div>
+                <div class="day">Seg</div>
+                <div class="day">Ter</div>
+                <div class="day">Qua</div>
+                <div class="day">Qui</div>
+                <div class="day">Sex</div>
+                <div class="day">Sáb</div>
+            </div>
+        </div>
+    </div>
 </div>

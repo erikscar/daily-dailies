@@ -1,37 +1,109 @@
 @use "../../../../app/assets/styles/mixins" as *;
 @use "../../../../app/assets/styles/variables" as *;
 
-
 .home-container {
-    display: flex;
-    height: 90vh;
-    background-color: #dbdbdb;
-    box-shadow: $box-shadow;
-    border-radius: $cardborder-radius;
+  display: flex;
+  height: 90vh;
+  background-color: #dbdbdb;
+  box-shadow: $box-shadow;
+  border-radius: $cardborder-radius;
 
-    aside {
-        display: flex;
-        flex-direction: column;
+  aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0.5rem;
+    background-color: #fff;
+    border-radius: $cardborder-radius;
+    box-shadow: $box-shadow;
+
+    img {
+      width: 6rem;
+    }
+
+    i {
+      font-size: 30px;
+      color: #ff6f00;
+      transition: 1s;
+    }
+
+    .aside-icons {
+      @include flex-center;
+      flex-direction: column;
+      gap: 1.75rem;
+
+      a:hover {
+        i {
+            color: #000;
+        }
+
+      }
+    }
+
+    a.active {
+      background-color: #ff6f00;
+      border-radius: 100%;
+      padding: 0.8rem;
+
+      i {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.main-content {
+    padding: 1.5rem 2rem;
+    width: 100%;
+}
+    .header {
+        @include flex-center;
         justify-content: space-between;
-        align-items: center;
-        padding: 3rem .5rem;
         background-color: #fff;
-        border-radius: $cardborder-radius;
         box-shadow: $box-shadow;
+        border-radius: 1rem;
+        padding: .75rem 3rem;
+
+        .input-wrapper {
+            border-radius: 2rem;
+            padding: .7rem .8rem;
+            background-color: #eeeeee;
+            display: inline;
+    
+            input {
+                background-color: transparent;
+                border: none;
+                outline: none;
+                font-size: 14px;
+                padding: 0 1rem;
+            }
+        
+            button {
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+                transition: 1s;
+            }
+        
+            button:hover {
+                opacity: 0.5;
+            }
+        }
+
+        .header-icons {
+            @include flex-center;
+            gap: 1rem;
+            i {
+                font-size: 26px;
+            }
 
             img {
-                width: 6rem;
+                width: 3rem;
+                height: 3rem;
+                border-radius: 100%;
             }
-
-            i {
-                font-size: 32px;
-                color: #ff6f00;
-            }
-       
-        .aside-icons {
-           @include flex-center;
-           flex-direction: column;
-           gap: 1.5rem;
         }
     }
-}
+
+

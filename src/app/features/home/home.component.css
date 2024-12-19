@@ -10,7 +10,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 3rem 0.5rem;
+  padding: 2rem 0.5rem;
   background-color: #fff;
   border-radius: 2rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
@@ -19,15 +19,79 @@
   width: 6rem;
 }
 .home-container aside i {
-  font-size: 32px;
+  font-size: 30px;
   color: #ff6f00;
+  transition: 1s;
 }
 .home-container aside .aside-icons {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.75rem;
+}
+.home-container aside .aside-icons a:hover i {
+  color: #000;
+}
+.home-container aside a.active {
+  background-color: #ff6f00;
+  border-radius: 100%;
+  padding: 0.8rem;
+}
+.home-container aside a.active i {
+  color: #fff;
+}
+
+.main-content {
+  padding: 1.5rem 2rem;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  border-radius: 1rem;
+  padding: 0.75rem 3rem;
+}
+.header .input-wrapper {
+  border-radius: 2rem;
+  padding: 0.7rem 0.8rem;
+  background-color: #eeeeee;
+  display: inline;
+}
+.header .input-wrapper input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  padding: 0 1rem;
+}
+.header .input-wrapper button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: 1s;
+}
+.header .input-wrapper button:hover {
+  opacity: 0.5;
+}
+.header .header-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.header .header-icons i {
+  font-size: 26px;
+}
+.header .header-icons img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
 }
 
 /*# sourceMappingURL=home.component.css.map */
