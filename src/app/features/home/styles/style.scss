@@ -12,21 +12,26 @@
     aside {
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
         align-items: center;
-        padding: 1rem;
+        padding: 4rem .5rem;
         background-color: #fff;
         border-radius: $cardborder-radius;
         box-shadow: $box-shadow;
-        gap: 1rem;
 
             img {
-                width: 5rem;
+                width: 6rem;
             }
 
             i {
-                font-size: 25px;
-                color: #000;
+                font-size: 32px;
+                color: #ff6f00;
             }
        
+        .aside-icons {
+           @include flex-center;
+           flex-direction: column;
+           gap: 1.5rem;
+        }
     }
 }

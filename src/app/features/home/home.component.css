@@ -8,19 +8,26 @@
 .home-container aside {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 4rem 0.5rem;
   background-color: #fff;
   border-radius: 2rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-  gap: 1rem;
 }
 .home-container aside img {
-  width: 5rem;
+  width: 6rem;
 }
 .home-container aside i {
-  font-size: 25px;
-  color: #000;
+  font-size: 32px;
+  color: #ff6f00;
+}
+.home-container aside .aside-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 /*# sourceMappingURL=home.component.css.map */
